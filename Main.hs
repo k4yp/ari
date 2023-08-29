@@ -1,14 +1,19 @@
 module Main where
 
 import System.IO ()
-import Parser (Node(..), parse)
+import Tokenizer (Token(..), tokenize)
 
-stringify :: Node -> String
-stringify (Node str num) = "type: " ++ str ++ ", value: " ++ num
+instance Show Token where
+    show (Number n) = "Number " ++ show n
+    show Plus = "Plus"
+    show Minus = "Minus"
+    show LeftParen = "LeftParen"
+    show RightParen = "RightParen"
 
 main :: IO ()
 main = do
     contents <- readFile "main.en"
     putStrLn contents
 
-    putStrLn (stringify (parse contents))
+    let tokens = tokenize contents
+    mapM_ (putStrLn . show) tokens
