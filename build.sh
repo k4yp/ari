@@ -1,0 +1,1 @@
+ghc Main.hs -o main -no-keep-hi-files -no-keep-o-files; ./main
