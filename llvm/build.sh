@@ -1,4 +1,4 @@
-llc $1.ll -o $1.s
-clang $1.s -o $1
-rm $1.s
-./$1
+mkdir -p bin
+llc $1.ll -o ./bin/$1.s
+clang ./bin/$1.s -o ./bin/$1
+./bin/$1
