@@ -1,0 +1,17 @@
+a + a -> a
+x + y = add x y
+
+int - int -> int
+x - y = subtract x y
+
+int * int -> int
+x * y = multiply x y
+
+int × int -> int
+x × y = multiply x y
+
+int ! -> int
+x ! = factorial x
+
+| num | -> num
+| x |  = abs x
