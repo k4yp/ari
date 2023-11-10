@@ -19,7 +19,7 @@ stringify (t:ts) = do
 
 main :: IO ()
 main = do
-    contents <- readFile "main.en"
+    contents <- readFile "main.ar"
     putStrLn (contents ++ "\n")
 
     let tokens = tokenize contents
